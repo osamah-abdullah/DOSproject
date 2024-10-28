@@ -39,7 +39,8 @@ app.get('/info', async (req, res) => {
 // Search books by topic
 app.get('/search/:topic', async (req, res) => {
   const books = await loadData();
-  const result = books.filter(book => book.topic === req.params.topic);
+  let result = books.filter(book => book.topic === req.params.topic);
+ // result={id:result.id,title:result.title}  لللمناااااااااااااااااااقششششةةةةةةةة اذا طلعت بدها زي الدكتور الوبجكت يكون 
   const logMessage = `Search for topic '${req.params.topic}' returned: ${JSON.stringify(result)}`;
 logToFile(logMessage);
 console.log(logMessage);
@@ -52,7 +53,8 @@ console.log(logMessage);
 // Get book info by item number
 app.get('/info/:item_number', async (req, res) => {
   const books = await loadData();
-  const book = books.find(book => book.id === parseInt(req.params.item_number));
+  let book = books.find(book => book.id === parseInt(req.params.item_number));
+  book ={title:book.title,quantity:book.quantity,price:book.price}
   book ? res.json(book) : res.status(404).json({ message: 'Book not found' });
   //book ? console.log(book) :console.log({ message: 'Book not found' });
   const logMessage = `Info requested for item number ${req.params.item_number}: ${book ? JSON.stringify(book) : 'Book not found'}`;
