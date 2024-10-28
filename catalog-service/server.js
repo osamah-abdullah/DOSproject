@@ -40,6 +40,12 @@ app.get('/info', async (req, res) => {
 app.get('/search/:topic', async (req, res) => {
   const books = await loadData();
   let result = books.filter(book => book.topic === req.params.topic);
+  if(result.length==0){
+    const logMessage = `Search for topic '${req.params.topic}' returned: ${JSON.stringify(result)}`;
+    logToFile(logMessage);
+  console.log(logMessage);
+    return res.status(404).json({message:"Topic not found"})
+  }
  // result={id:result.id,title:result.title}  لللمناااااااااااااااااااقششششةةةةةةةة اذا طلعت بدها زي الدكتور الوبجكت يكون 
   const logMessage = `Search for topic '${req.params.topic}' returned: ${JSON.stringify(result)}`;
 logToFile(logMessage);
@@ -85,7 +91,7 @@ app.patch('/info/:item_number',async (req,res)=>{
   if (req.body.quantity !== undefined) {
     const quantity = +req.body.quantity;
     if (!isNaN(quantity)) book.quantity = quantity; // Update quantity if it's a valid number
-  }s
+  }
  //book={...book,...req.body}
  //console.log(req.body)
  //console.log(book)

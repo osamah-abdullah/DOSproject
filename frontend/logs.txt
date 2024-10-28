@@ -1,0 +1,4 @@
+Frontend search for topic 'distributed systems' returned: [{"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":993,"price":20000,"topic":"distributed systems"},{"id":2,"title":"RPCs for Noobs","quantity":0,"price":20,"topic":"distributed systems"}]
+Frontend search for topic 'distributed systems' returned: [{"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":993,"price":20000,"topic":"distributed systems"},{"id":2,"title":"RPCs for Noobs","quantity":0,"price":20,"topic":"distributed systems"}]
+Frontend search for topic 'distributed systems' returned: [{"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":993,"price":20000,"topic":"distributed systems"},{"id":2,"title":"RPCs for Noobs","quantity":0,"price":20,"topic":"distributed systems"}]
+Frontend info for item number 2: {"id":2,"title":"RPCs for Noobs","quantity":0,"price":20,"topic":"distributed systems"}

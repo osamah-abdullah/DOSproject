@@ -1,0 +1,11 @@
+Book purchased (ID: 2): RPCs for Noobs, Remaining stock: 2
+Book purchased (ID: 2): RPCs for Noobs, Remaining stock: 1
+Book purchased (ID: 2): RPCs for Noobs, Remaining stock: 0
+Attempted to purchase book (ID: 2): Out of stock
+Book purchased (ID: 1): How to get a good grade in DOS in 40 minutes a day, Remaining stock: 999
+Book purchased (ID: 1): How to get a good grade in DOS in 40 minutes a day, Remaining stock: 998
+Book purchased (ID: 1): How to get a good grade in DOS in 40 minutes a day, Remaining stock: 997
+Book purchased (ID: 1): How to get a good grade in DOS in 40 minutes a day, Remaining stock: 996
+Book purchased (ID: 1): How to get a good grade in DOS in 40 minutes a day, Remaining stock: 995
+Book purchased (ID: 1): How to get a good grade in DOS in 40 minutes a day, Remaining stock: 994
+Book purchased (ID: 1): How to get a good grade in DOS in 40 minutes a day, Remaining stock: 993

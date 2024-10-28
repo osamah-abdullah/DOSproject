@@ -1,0 +1,32 @@
+Search for topic 'distributed systems' returned: [{"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":5,"price":30,"topic":"distributed systems"},{"id":2,"title":"RPCs for Noobs","quantity":3,"price":20,"topic":"distributed systems"}]
+Search for topic 'distributed systemss' returned: []
+Search for topic 'distributed systems' returned: [{"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":5,"price":30,"topic":"distributed systems"},{"id":2,"title":"RPCs for Noobs","quantity":3,"price":20,"topic":"distributed systems"}]
+Info requested for item number 2: {"id":2,"title":"RPCs for Noobs","quantity":3,"price":20,"topic":"distributed systems"}
+Request to Update a book 1: {"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":1000,"price":20000,"topic":"distributed systems"}
+Request to Update a book 1: {"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":1000,"price":20000,"topic":"distributed systems"}
+Info requested for item number 2: {"id":2,"title":"RPCs for Noobs","quantity":3,"price":20,"topic":"distributed systems"}
+Request to Update a book 2: {"id":2,"title":"RPCs for Noobs","quantity":2,"price":20,"topic":"distributed systems"}
+Info requested for item number 2: {"id":2,"title":"RPCs for Noobs","quantity":2,"price":20,"topic":"distributed systems"}
+Request to Update a book 2: {"id":2,"title":"RPCs for Noobs","quantity":1,"price":20,"topic":"distributed systems"}
+Info requested for item number 2: {"id":2,"title":"RPCs for Noobs","quantity":1,"price":20,"topic":"distributed systems"}
+Request to Update a book 2: {"id":2,"title":"RPCs for Noobs","quantity":0,"price":20,"topic":"distributed systems"}
+Info requested for item number 2: {"id":2,"title":"RPCs for Noobs","quantity":0,"price":20,"topic":"distributed systems"}
+Info requested for item number 9: Book not found
+Info requested for item number 1: {"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":1000,"price":20000,"topic":"distributed systems"}
+Request to Update a book 1: {"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":999,"price":20000,"topic":"distributed systems"}
+Info requested for item number 1: {"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":999,"price":20000,"topic":"distributed systems"}
+Request to Update a book 1: {"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":998,"price":20000,"topic":"distributed systems"}
+Info requested for item number 1: {"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":998,"price":20000,"topic":"distributed systems"}
+Request to Update a book 1: {"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":997,"price":20000,"topic":"distributed systems"}
+Info requested for item number 1: {"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":997,"price":20000,"topic":"distributed systems"}
+Request to Update a book 1: {"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":996,"price":20000,"topic":"distributed systems"}
+Info requested for item number 1: {"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":996,"price":20000,"topic":"distributed systems"}
+Request to Update a book 1: {"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":995,"price":20000,"topic":"distributed systems"}
+Info requested for item number 1: {"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":995,"price":20000,"topic":"distributed systems"}
+Request to Update a book 1: {"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":994,"price":20000,"topic":"distributed systems"}
+Info requested for item number 1: {"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":994,"price":20000,"topic":"distributed systems"}
+Request to Update a book 1: {"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":993,"price":20000,"topic":"distributed systems"}
+Search for topic 'distributed systems' returned: [{"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":993,"price":20000,"topic":"distributed systems"},{"id":2,"title":"RPCs for Noobs","quantity":0,"price":20,"topic":"distributed systems"}]
+Search for topic 'distributed systems' returned: [{"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":993,"price":20000,"topic":"distributed systems"},{"id":2,"title":"RPCs for Noobs","quantity":0,"price":20,"topic":"distributed systems"}]
+Search for topic 'distributed systems' returned: [{"id":1,"title":"How to get a good grade in DOS in 40 minutes a day","quantity":993,"price":20000,"topic":"distributed systems"},{"id":2,"title":"RPCs for Noobs","quantity":0,"price":20,"topic":"distributed systems"}]
+Info requested for item number 2: {"id":2,"title":"RPCs for Noobs","quantity":0,"price":20,"topic":"distributed systems"}

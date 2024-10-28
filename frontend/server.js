@@ -39,7 +39,7 @@ console.log(logMessage);
   }
 });
 
-// Purchase a book
+/* // Purchase a book
 app.post('/purchase/:item_number', async (req, res) => {
   try {
     const response = await axios.post(`http://order-service:3002/purchase/${req.params.item_number}`);
@@ -51,7 +51,7 @@ console.log(logMessage);
     res.status(500).json({ message: 'Error purchasing book', error: error.message });
   }
 });
-
+ */
 app.listen(PORT, () => {
   console.log(`Frontend service running on port ${PORT}`);
 });
