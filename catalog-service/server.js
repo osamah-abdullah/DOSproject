@@ -31,6 +31,9 @@ app.get('/info', async (req, res) => {
     const books = await loadData();
     res.json(books)
     console.log(books)
+    const logMessage = `Info requested for  all items Information `;
+    logToFile(logMessage);
+    console.log(logMessage);
   });
 
 // Search books by topic
@@ -42,6 +45,7 @@ logToFile(logMessage);
 console.log(logMessage);
 
   res.json(result);
+  
   //console.log(result)
 });
 
@@ -88,6 +92,9 @@ app.patch('/info/:item_number',async (req,res)=>{
 );
 await storeData(newbooks)
 res.json(book)
+const logMessage = `Request to Update a book ${req.params.item_number}: ${book ? JSON.stringify(book) : 'Book not found'}`;
+logToFile(logMessage);
+console.log(logMessage);
 //const b=await loadData(DATA_FILE)
 //console.log(b)
 })

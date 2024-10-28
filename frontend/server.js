@@ -44,6 +44,9 @@ app.post('/purchase/:item_number', async (req, res) => {
   try {
     const response = await axios.post(`http://order-service:3002/purchase/${req.params.item_number}`);
     res.json(response.data);
+    const logMessage = `Frontend request to purchase item number ${req.params.item_number}: ${JSON.stringify(response.data)}`;
+logToFile(logMessage);
+console.log(logMessage);
   } catch (error) {
     res.status(500).json({ message: 'Error purchasing book', error: error.message });
   }
