@@ -54,7 +54,7 @@ console.log(logMessage);
 app.get('/info/:item_number', async (req, res) => {
   const books = await loadData();
   let book = books.find(book => book.id === parseInt(req.params.item_number));
-  book ={title:book.title,quantity:book.quantity,price:book.price}
+  //book ={title:book.title,quantity:book.quantity,price:book.price} مناااااااااااااااااقشةةةة//
   book ? res.json(book) : res.status(404).json({ message: 'Book not found' });
   //book ? console.log(book) :console.log({ message: 'Book not found' });
   const logMessage = `Info requested for item number ${req.params.item_number}: ${book ? JSON.stringify(book) : 'Book not found'}`;
