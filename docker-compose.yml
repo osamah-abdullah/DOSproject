@@ -1,0 +1,22 @@
+# docker-compose.yml
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - catalog-service
+      - order-service
+
+  catalog-service:
+    build: ./catalog-service
+    ports:
+      - "3001:3001"
+
+  order-service:
+    build: ./order-service
+    ports:
+      - "3002:3002"
+    depends_on:
+      - catalog-service
