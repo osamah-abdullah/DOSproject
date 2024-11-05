@@ -1,22 +1,56 @@
-# docker-compose.yml
-
+version: '3'
 services:
-  frontend:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - catalog-service1
+      - catalog-service2
+      - order-service1
+      - order-service2
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+
+  front-end:
     build: ./frontend
     ports:
       - "3000:3000"
     depends_on:
-      - catalog-service
-      - order-service
+      - redis
+      - nginx
+    environment:
+      - REDIS_HOST=redis
+    volumes:
+      - ./frontend:/app
 
-  catalog-service:
+  catalog-service1:
     build: ./catalog-service
-    ports:
-      - "3001:3001"
+    expose:
+      - "3001"
+    volumes:
+      - catalog-data:/app/DB
 
-  order-service:
+  catalog-service2:
+    build: ./catalog-service
+    expose:
+      - "3001"
+    volumes:
+      - catalog-data:/app/DB
+
+  order-service1:
     build: ./order-service
-    ports:
-      - "3002:3002"
-    depends_on:
-      - catalog-service
+    expose:
+      - "3002"
+
+  order-service2:
+    build: ./order-service
+    expose:
+      - "3002"
+volumes:
+  catalog-data:

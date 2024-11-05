@@ -2,7 +2,13 @@ const express = require('express');
 const fs = require('fs-extra');
 const app = express();
 const PORT = 3001;
-const DATA_FILE = './books.json';
+const DATA_FILE = './DB/books.json';
+const redis = require('redis');
+const redisClient = redis.createClient({ url: 'redis://redis:6379' });
+redisClient.connect()
+  .then(() => console.log("Connected to Redis"))
+  .catch((err) => console.error("Redis connection error", err));
+
 app.use(express.json());
 // Load book data
 async function loadData() {
@@ -103,6 +109,17 @@ res.json(book)
 const logMessage = `Request to Update a book ${req.params.item_number}: ${book ? JSON.stringify(book) : 'Book not found'}`;
 logToFile(logMessage);
 console.log(logMessage);
+// Invalidate cache in purchase/update logic
+const itemNumber = req.params.item_number;
+const cacheKey = `info:${itemNumber}`;
+
+const isCached = await redisClient.exists(cacheKey);  // Check if the cache key exists
+if (isCached) {
+  await redisClient.del(cacheKey);
+  console.log(`Cache invalidated for item ${itemNumber}`);
+} else {
+  console.log(`Cache for item ${itemNumber} was not found, no invalidation needed.`);
+}
 //const b=await loadData(DATA_FILE)
 //console.log(b)
 })
