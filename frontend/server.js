@@ -18,6 +18,17 @@ function logToFile(message) {
     }
   });
 }
+app.use((req, res, next) => {
+  const startTime = Date.now();
+  
+  res.on('finish', () => {
+    const endTime = Date.now();
+    console.log(`Request to ${req.originalUrl} took ${endTime - startTime} ms`);
+  });
+  
+  next();
+});
+
 
 // Search books by topic with caching
 app.get('/search/:topic', async (req, res) => {
@@ -65,7 +76,9 @@ app.get('/info/:item_number', async (req, res) => {
     const response = await axios.get(`http://nginx/catalog/info/${itemNumber}`);
     const data = response.data;
     await redisClient.setEx(cacheKey, 3600, JSON.stringify(data));
-    const logMessage = `Info requested for item number ${req.params.item_number}: ${book ? JSON.stringify(book) : 'Book not found'}`;
+    //const logMessage = `Info requested for item number ${req.params.item_number}: ${book ? JSON.stringify(book) : 'Book not found'}`;
+    const logMessage = `Info requested for item number ${itemNumber}: ${data ? JSON.stringify(data) : 'Book not found'}`;
+
     logToFile(logMessage);
     console.log(logMessage);
     res.json(data);
