@@ -49,7 +49,7 @@ app.get('/search/:topic', async (req, res) => {
     const response = await axios.get(`http://nginx/catalog/search/${topic}`);
     const data = response.data;
     await redisClient.setEx(cacheKey, 3600, JSON.stringify(data)); // Cache for 1 hour
-    const logMessage = `Search for topic '${topic}' returned: ${JSON.stringify(response)}`;
+    const logMessage = `Search for topic '${req.params.topic}' returned: ${JSON.stringify(data)}`;
     logToFile(logMessage);
     console.log(logMessage);
     
