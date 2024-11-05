@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "4d906fe0-872e-463c-bf35-79a3caea7bd2",
+		"name": "DOSproject part2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38821097"
+	},
+	"item": [
+		{
+			"name": "Catalog-service",
+			"item": [
+				{
+					"name": "Get All info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/catalog/info/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"catalog",
+								"info",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search by topic name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/catalog/search/distributed systems",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"catalog",
+								"search",
+								"distributed systems"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get info by item number",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/catalog/info/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"catalog",
+								"info",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update by item number",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 2,\r\n        \"title\": \"RPCs for Noobs\",\r\n        \"quantity\": 1000,\r\n        \"price\": 20000,\r\n        \"topic\": \"distributed systems\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/catalog/info/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"catalog",
+								"info",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order-service",
+			"item": [
+				{
+					"name": "add purchase",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/order/purchase/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"order",
+								"purchase",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Front-end service",
+			"item": [
+				{
+					"name": "search by topic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/search/distributed systems",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"search",
+								"distributed systems"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "info by item number",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/info/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"info",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/purchase/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"purchase",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
